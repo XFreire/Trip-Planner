@@ -23,6 +23,7 @@ class SearchViewController: UIViewController {
     // MARK: Initialization
     init(presenter: SearchPresenterProtocol) {
         self.presenter = presenter
+        super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
     
     required init?(coder aDecoder: NSCoder) {

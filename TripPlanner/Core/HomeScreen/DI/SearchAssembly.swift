@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class SearchAssembly {
+final public class SearchAssembly {
     
     // MARK: Properties
     private let webServiceAssembly: WebServiceAssembly
