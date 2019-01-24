@@ -18,7 +18,7 @@ final public class SearchAssembly {
         self.webServiceAssembly = webServiceAssembly
     }
     
-    func viewController() -> UIViewController {
+    public func viewController() -> UIViewController {
         return SearchViewController(presenter: presenter())
     }
     
