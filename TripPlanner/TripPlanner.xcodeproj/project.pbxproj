@@ -13,6 +13,11 @@
 		AC782D3E21F9A93100CE7A7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC782D3D21F9A93100CE7A7E /* Assets.xcassets */; };
 		AC782D4121F9A93100CE7A7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC782D3F21F9A93100CE7A7E /* LaunchScreen.storyboard */; };
 		AC782D4C21F9A93200CE7A7E /* TripPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782D4B21F9A93200CE7A7E /* TripPlannerTests.swift */; };
+		AC782D6421F9A96700CE7A7E /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC782D5B21F9A96700CE7A7E /* Core.framework */; };
+		AC782D6B21F9A96700CE7A7E /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782D6A21F9A96700CE7A7E /* CoreTests.swift */; };
+		AC782D6D21F9A96700CE7A7E /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = AC782D5D21F9A96700CE7A7E /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC782D7021F9A96700CE7A7E /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC782D5B21F9A96700CE7A7E /* Core.framework */; };
+		AC782D7121F9A96700CE7A7E /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC782D5B21F9A96700CE7A7E /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +28,42 @@
 			remoteGlobalIDString = AC782D3221F9A92D00CE7A7E;
 			remoteInfo = TripPlanner;
 		};
+		AC782D6521F9A96700CE7A7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC782D2B21F9A92D00CE7A7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC782D5A21F9A96700CE7A7E;
+			remoteInfo = Core;
+		};
+		AC782D6721F9A96700CE7A7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC782D2B21F9A92D00CE7A7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC782D3221F9A92D00CE7A7E;
+			remoteInfo = TripPlanner;
+		};
+		AC782D6E21F9A96700CE7A7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC782D2B21F9A92D00CE7A7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC782D5A21F9A96700CE7A7E;
+			remoteInfo = Core;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AC782D7521F9A96700CE7A7E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AC782D7121F9A96700CE7A7E /* Core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AC782D3321F9A92D00CE7A7E /* TripPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +76,12 @@
 		AC782D4721F9A93200CE7A7E /* TripPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC782D4B21F9A93200CE7A7E /* TripPlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPlannerTests.swift; sourceTree = "<group>"; };
 		AC782D4D21F9A93200CE7A7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC782D5B21F9A96700CE7A7E /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC782D5D21F9A96700CE7A7E /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
+		AC782D5E21F9A96700CE7A7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC782D6321F9A96700CE7A7E /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC782D6A21F9A96700CE7A7E /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
+		AC782D6C21F9A96700CE7A7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC782D7021F9A96700CE7A7E /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +97,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC782D5821F9A96700CE7A7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC782D6021F9A96700CE7A7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC782D6421F9A96700CE7A7E /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +123,8 @@
 			children = (
 				AC782D3521F9A92D00CE7A7E /* TripPlanner */,
 				AC782D4A21F9A93200CE7A7E /* TripPlannerTests */,
+				AC782D5C21F9A96700CE7A7E /* Core */,
+				AC782D6921F9A96700CE7A7E /* CoreTests */,
 				AC782D3421F9A92D00CE7A7E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +134,8 @@
 			children = (
 				AC782D3321F9A92D00CE7A7E /* TripPlanner.app */,
 				AC782D4721F9A93200CE7A7E /* TripPlannerTests.xctest */,
+				AC782D5B21F9A96700CE7A7E /* Core.framework */,
+				AC782D6321F9A96700CE7A7E /* CoreTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,7 +162,36 @@
 			path = TripPlannerTests;
 			sourceTree = "<group>";
 		};
+		AC782D5C21F9A96700CE7A7E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AC782D5D21F9A96700CE7A7E /* Core.h */,
+				AC782D5E21F9A96700CE7A7E /* Info.plist */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		AC782D6921F9A96700CE7A7E /* CoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC782D6A21F9A96700CE7A7E /* CoreTests.swift */,
+				AC782D6C21F9A96700CE7A7E /* Info.plist */,
+			);
+			path = CoreTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AC782D5621F9A96700CE7A7E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC782D6D21F9A96700CE7A7E /* Core.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		AC782D3221F9A92D00CE7A7E /* TripPlanner */ = {
@@ -106,10 +201,12 @@
 				AC782D2F21F9A92D00CE7A7E /* Sources */,
 				AC782D3021F9A92D00CE7A7E /* Frameworks */,
 				AC782D3121F9A92D00CE7A7E /* Resources */,
+				AC782D7521F9A96700CE7A7E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AC782D6F21F9A96700CE7A7E /* PBXTargetDependency */,
 			);
 			name = TripPlanner;
 			productName = TripPlanner;
@@ -134,6 +231,43 @@
 			productReference = AC782D4721F9A93200CE7A7E /* TripPlannerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		AC782D5A21F9A96700CE7A7E /* Core */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC782D7221F9A96700CE7A7E /* Build configuration list for PBXNativeTarget "Core" */;
+			buildPhases = (
+				AC782D5621F9A96700CE7A7E /* Headers */,
+				AC782D5721F9A96700CE7A7E /* Sources */,
+				AC782D5821F9A96700CE7A7E /* Frameworks */,
+				AC782D5921F9A96700CE7A7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Core;
+			productName = Core;
+			productReference = AC782D5B21F9A96700CE7A7E /* Core.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AC782D6221F9A96700CE7A7E /* CoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC782D7621F9A96700CE7A7E /* Build configuration list for PBXNativeTarget "CoreTests" */;
+			buildPhases = (
+				AC782D5F21F9A96700CE7A7E /* Sources */,
+				AC782D6021F9A96700CE7A7E /* Frameworks */,
+				AC782D6121F9A96700CE7A7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC782D6621F9A96700CE7A7E /* PBXTargetDependency */,
+				AC782D6821F9A96700CE7A7E /* PBXTargetDependency */,
+			);
+			name = CoreTests;
+			productName = CoreTests;
+			productReference = AC782D6321F9A96700CE7A7E /* CoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -148,6 +282,13 @@
 						CreatedOnToolsVersion = 10.1;
 					};
 					AC782D4621F9A93200CE7A7E = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = AC782D3221F9A92D00CE7A7E;
+					};
+					AC782D5A21F9A96700CE7A7E = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					AC782D6221F9A96700CE7A7E = {
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = AC782D3221F9A92D00CE7A7E;
 					};
@@ -168,6 +309,8 @@
 			targets = (
 				AC782D3221F9A92D00CE7A7E /* TripPlanner */,
 				AC782D4621F9A93200CE7A7E /* TripPlannerTests */,
+				AC782D5A21F9A96700CE7A7E /* Core */,
+				AC782D6221F9A96700CE7A7E /* CoreTests */,
 			);
 		};
 /* End PBXProject section */
@@ -184,6 +327,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		AC782D4521F9A93200CE7A7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC782D5921F9A96700CE7A7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC782D6121F9A96700CE7A7E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -210,6 +367,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AC782D5721F9A96700CE7A7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC782D5F21F9A96700CE7A7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC782D6B21F9A96700CE7A7E /* CoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -217,6 +389,21 @@
 			isa = PBXTargetDependency;
 			target = AC782D3221F9A92D00CE7A7E /* TripPlanner */;
 			targetProxy = AC782D4821F9A93200CE7A7E /* PBXContainerItemProxy */;
+		};
+		AC782D6621F9A96700CE7A7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC782D5A21F9A96700CE7A7E /* Core */;
+			targetProxy = AC782D6521F9A96700CE7A7E /* PBXContainerItemProxy */;
+		};
+		AC782D6821F9A96700CE7A7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC782D3221F9A92D00CE7A7E /* TripPlanner */;
+			targetProxy = AC782D6721F9A96700CE7A7E /* PBXContainerItemProxy */;
+		};
+		AC782D6F21F9A96700CE7A7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC782D5A21F9A96700CE7A7E /* Core */;
+			targetProxy = AC782D6E21F9A96700CE7A7E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -434,6 +621,102 @@
 			};
 			name = Release;
 		};
+		AC782D7321F9A96700CE7A7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8LNA9LB2Y8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Core/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexandrefreire.Core;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AC782D7421F9A96700CE7A7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8LNA9LB2Y8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Core/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexandrefreire.Core;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AC782D7721F9A96700CE7A7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8LNA9LB2Y8;
+				INFOPLIST_FILE = CoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexandrefreire.CoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TripPlanner.app/TripPlanner";
+			};
+			name = Debug;
+		};
+		AC782D7821F9A96700CE7A7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8LNA9LB2Y8;
+				INFOPLIST_FILE = CoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexandrefreire.CoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TripPlanner.app/TripPlanner";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -460,6 +743,24 @@
 			buildConfigurations = (
 				AC782D5421F9A93200CE7A7E /* Debug */,
 				AC782D5521F9A93200CE7A7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC782D7221F9A96700CE7A7E /* Build configuration list for PBXNativeTarget "Core" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC782D7321F9A96700CE7A7E /* Debug */,
+				AC782D7421F9A96700CE7A7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC782D7621F9A96700CE7A7E /* Build configuration list for PBXNativeTarget "CoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC782D7721F9A96700CE7A7E /* Debug */,
+				AC782D7821F9A96700CE7A7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
