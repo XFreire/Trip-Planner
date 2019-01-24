@@ -33,8 +33,24 @@ class SearchViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        subscribeToTextFieldChanges()
         presenter.view = self
         presenter.didLoad()
+    }
+    
+    // MARK: UITextFieldActions
+    func subscribeToTextFieldChanges() {
+        originField.addTarget(self, action: #selector(textDidChange(textField:)), for: .editingChanged)
+        destinationField.addTarget(self, action: #selector(textDidChange(textField:)), for: .editingChanged)
+    }
+    
+    @objc func textDidChange(textField: UITextField) {
+        guard let text = textField.text, text.count > 2 else { return }
+        if textField == originField {
+            presenter.source = text
+        } else if textField == destinationField {
+            presenter.destination = text
+        }
     }
 }
 
