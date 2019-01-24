@@ -9,8 +9,7 @@
 import Foundation
 
 protocol SearchView: class {
-    func showSourceSuggestions(_ suggestions: [City])
-    func showDestinationSuggestions(_ suggestions: [City])
+    func setupSuggestions(_ suggestions: [City])
     func show(price: Double?)
     func show(route: [Connection])
     func show(error: Error)
@@ -18,7 +17,7 @@ protocol SearchView: class {
 
 protocol SearchPresenterProtocol {
     var view: SearchView? { get set }
-    var source: String { get set }
+    var origin: String { get set }
     var destination: String { get set }
     var network: Network? { get set }
     func didLoad()
@@ -31,7 +30,7 @@ final class SearchPresenter: SearchPresenterProtocol {
     
     weak var view: SearchView?
     
-    var source: String = "" {
+    var origin: String = "" {
         didSet {
             updateConnections()
         }
@@ -43,7 +42,13 @@ final class SearchPresenter: SearchPresenterProtocol {
         }
     }
     
+    var cities: [City] {
+        return network?.cities ?? []
+    }
+    
     var network: Network?
+    
+    
     
     // MARK: Initialization
     init(repository: NetworkRepositoryProtocol) {
@@ -61,9 +66,21 @@ final class SearchPresenter: SearchPresenterProtocol {
     }
     
     private func updateConnections() {
-        guard let connections = network?.cheapestConnection(from: source, to: destination) else {
-            return
+        print("Origin: \(origin)")
+        print("Dest: \(destination)")
+       
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self, let network = self.network else { return }
+            self.view?.setupSuggestions(network.cities)
+            let connections = network.cheapestConnection(from: self.origin, to: self.destination)
+            guard !connections.isEmpty else {
+                self.view?.show(price: nil)
+                return
+            }
+            self.view?.show(price: connections.price)
+            
         }
-        view?.show(price: connections.price)
+
+        
     }
 }

@@ -54,6 +54,7 @@
 		AC782E2421FA3AC100CE7A7E /* SearchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E2321FA3AC100CE7A7E /* SearchAssembly.swift */; };
 		AC782E2721FA3BC100CE7A7E /* CoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E2621FA3BC100CE7A7E /* CoreAssembly.swift */; };
 		AC782E2921FA3C5E00CE7A7E /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E2821FA3C5E00CE7A7E /* AppAssembly.swift */; };
+		AC782E2C21FA40CD00CE7A7E /* TextFieldAutoCompleter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E2B21FA40CD00CE7A7E /* TextFieldAutoCompleter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +178,7 @@
 		AC782E2321FA3AC100CE7A7E /* SearchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAssembly.swift; sourceTree = "<group>"; };
 		AC782E2621FA3BC100CE7A7E /* CoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAssembly.swift; sourceTree = "<group>"; };
 		AC782E2821FA3C5E00CE7A7E /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
+		AC782E2B21FA40CD00CE7A7E /* TextFieldAutoCompleter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAutoCompleter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -358,6 +360,7 @@
 				AC782E1D21FA32AC00CE7A7E /* SearchViewController.swift */,
 				AC782E1E21FA32AC00CE7A7E /* SearchViewController.xib */,
 				AC782E2121FA354700CE7A7E /* SearchPresenter.swift */,
+				AC782E2B21FA40CD00CE7A7E /* TextFieldAutoCompleter.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -706,6 +709,7 @@
 				AC782D9621F9B36B00CE7A7E /* Endpoint.swift in Sources */,
 				AC782E1F21FA32AC00CE7A7E /* SearchViewController.swift in Sources */,
 				AC782D9721F9B36B00CE7A7E /* WebService.swift in Sources */,
+				AC782E2C21FA40CD00CE7A7E /* TextFieldAutoCompleter.swift in Sources */,
 				AC782E1821FA051900CE7A7E /* AdjacencyList+Location.swift in Sources */,
 				AC782E2221FA354700CE7A7E /* SearchPresenter.swift in Sources */,
 				AC782D9821F9B36B00CE7A7E /* WebServiceAssembly.swift in Sources */,

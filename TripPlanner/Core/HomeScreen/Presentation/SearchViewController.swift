@@ -19,10 +19,12 @@ class SearchViewController: UIViewController {
     
     // MARK: Properties
     private var presenter: SearchPresenterProtocol
+    private var autoCompleter: TextFieldAutoCompleter
     
     // MARK: Initialization
-    init(presenter: SearchPresenterProtocol) {
+    init(presenter: SearchPresenterProtocol, autoCompleter: TextFieldAutoCompleter = TextFieldAutoCompleter()) {
         self.presenter = presenter
+        self.autoCompleter = autoCompleter
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
     
@@ -33,9 +35,22 @@ class SearchViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        subscribeToTextFieldChanges()
         presenter.view = self
         presenter.didLoad()
+        subscribeToTextFieldChanges()
+        originField.delegate = self
+        destinationField.delegate = self
+        
+    }
+    
+    func setupBindings(with textField: UITextField) {
+        if let text = textField.text {
+            if textField == originField {
+                presenter.origin = text
+            } else if textField == destinationField {
+                presenter.destination = text
+            }
+        }
     }
     
     // MARK: UITextFieldActions
@@ -45,22 +60,13 @@ class SearchViewController: UIViewController {
     }
     
     @objc func textDidChange(textField: UITextField) {
-        guard let text = textField.text, text.count > 2 else { return }
-        if textField == originField {
-            presenter.source = text
-        } else if textField == destinationField {
-            presenter.destination = text
-        }
+        setupBindings(with: textField)
     }
 }
 
 extension SearchViewController: SearchView {
-    func showSourceSuggestions(_ suggestions: [City]) {
-        #warning("TODO")
-    }
-    
-    func showDestinationSuggestions(_ suggestions: [City]) {
-        #warning("TODO")
+    func setupSuggestions(_ suggestions: [City]) {
+        autoCompleter.suggestions = suggestions
     }
     
     func show(price: Double?) {
@@ -79,6 +85,41 @@ extension SearchViewController: SearchView {
     func show(error: Error) {
         #warning("TODO")
     }
+}
+
+extension SearchViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+   //     setupBindings(with: textField)
+        return !autoCompleteText(in : textField, using: string, suggestions: presenter.network?.cities ?? [])
+    }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        setupBindings(with: textField)
+        //textField.resignFirstResponder()
+        return true
+    }
     
+    func autoCompleteText(in textField: UITextField, using string: String, suggestions: [String]) -> Bool {
+        let theString = string.capitalized
+        if !theString.isEmpty,
+            let selectedTextRange = textField.selectedTextRange,
+            selectedTextRange.end == textField.endOfDocument,
+            let prefixRange = textField.textRange(from: textField.beginningOfDocument, to: selectedTextRange.start),
+            let text = textField.text( in : prefixRange) {
+            let prefix = text + theString
+            let matches = suggestions.filter {
+                $0.lowercased().hasPrefix(prefix.lowercased())
+            }
+            if (matches.count > 0) {
+                textField.text = matches[0]
+                setupBindings(with: textField)
+                if let start = textField.position(from: textField.beginningOfDocument, offset: prefix.count) {
+                    textField.selectedTextRange = textField.textRange(from: start, to: textField.endOfDocument)
+                    
+                    return true
+                }
+            }
+        }
+        return false
+    }
 }
