@@ -36,23 +36,4 @@ class ConnectionRepositoryTests: XCTestCase {
         
         XCTAssertEqual(connectionList?.count, 8)
     }
-    
-    func testConnectionRepository_ChepeastConnection_ReturnsTheCorrectConnection() {
-        let expectation = self.expectation(description: "CheapestConnectionBetweenTwoCities")
-        var connection: Connection?
-        
-        repository.cheapestConnection(between: "London", and: "<#T##City#>", then: {
-            connection = $0
-            expectation.fulfill()
-        }, catchError: { _ in
-            expectation.fulfill()
-        })
-        
-        waitForExpectations(timeout: 5, handler: nil)
-        
-        XCTAssertEqual(connection?.price, 200)
-    }
-    
-    
-
 }
