@@ -10,7 +10,6 @@ import Foundation
 
 protocol NetworkRepositoryProtocol {
     func network(then completion: @escaping (Network) -> Void, catchError: @escaping (Error) -> Void)
-    func cheapestConnection(between fromCity: City, and toCity: City, then completion: @escaping (Connection?) -> Void, catchError: @escaping (Error) -> Void)
 }
 
 final class ConnectionRepository: NetworkRepositoryProtocol {
@@ -31,12 +30,5 @@ final class ConnectionRepository: NetworkRepositoryProtocol {
         }, catchError: {
             catchError($0)
         })
-    }
-}
-
-extension NetworkRepositoryProtocol {
-    func cheapestConnection(between fromCity: City, and toCity: City, then completion: @escaping (Connection?) -> Void, catchError: @escaping (Error) -> Void) {
-        
-        #warning("Implement this")
     }
 }

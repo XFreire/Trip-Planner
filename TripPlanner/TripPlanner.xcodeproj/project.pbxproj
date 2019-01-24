@@ -29,7 +29,7 @@
 		AC782D9721F9B36B00CE7A7E /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782D9421F9B36B00CE7A7E /* WebService.swift */; };
 		AC782D9821F9B36B00CE7A7E /* WebServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782D9521F9B36B00CE7A7E /* WebServiceAssembly.swift */; };
 		AC782D9A21F9B46C00CE7A7E /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782D9921F9B46C00CE7A7E /* EndpointTests.swift */; };
-		AC782D9C21F9B7EF00CE7A7E /* ConnectionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782D9B21F9B7EF00CE7A7E /* ConnectionRepository.swift */; };
+		AC782D9C21F9B7EF00CE7A7E /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782D9B21F9B7EF00CE7A7E /* NetworkRepository.swift */; };
 		AC782D9F21F9CC6000CE7A7E /* MockConnectionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782D9E21F9CC6000CE7A7E /* MockConnectionRepository.swift */; };
 		AC782DA121F9CD3200CE7A7E /* ConnectionRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782DA021F9CD3200CE7A7E /* ConnectionRepositoryTests.swift */; };
 		AC782DEC21F9F3C900CE7A7E /* Algorithms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC782DE321F9F3C800CE7A7E /* Algorithms.framework */; };
@@ -49,6 +49,7 @@
 		AC782E1521F9FF2000CE7A7E /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E1421F9FF2000CE7A7E /* NetworkTests.swift */; };
 		AC782E1821FA051900CE7A7E /* AdjacencyList+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E1721FA051900CE7A7E /* AdjacencyList+Location.swift */; };
 		AC782E1A21FA247000CE7A7E /* Edge+Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E1921FA247000CE7A7E /* Edge+Connection.swift */; };
+		AC782E1C21FA2AFB00CE7A7E /* Array<Connection>+price.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E1B21FA2AFB00CE7A7E /* Array<Connection>+price.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,7 +147,7 @@
 		AC782D9421F9B36B00CE7A7E /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		AC782D9521F9B36B00CE7A7E /* WebServiceAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceAssembly.swift; sourceTree = "<group>"; };
 		AC782D9921F9B46C00CE7A7E /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
-		AC782D9B21F9B7EF00CE7A7E /* ConnectionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionRepository.swift; sourceTree = "<group>"; };
+		AC782D9B21F9B7EF00CE7A7E /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
 		AC782D9E21F9CC6000CE7A7E /* MockConnectionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConnectionRepository.swift; sourceTree = "<group>"; };
 		AC782DA021F9CD3200CE7A7E /* ConnectionRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionRepositoryTests.swift; sourceTree = "<group>"; };
 		AC782DE321F9F3C800CE7A7E /* Algorithms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Algorithms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +168,7 @@
 		AC782E1421F9FF2000CE7A7E /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		AC782E1721FA051900CE7A7E /* AdjacencyList+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdjacencyList+Location.swift"; sourceTree = "<group>"; };
 		AC782E1921FA247000CE7A7E /* Edge+Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Edge+Connection.swift"; sourceTree = "<group>"; };
+		AC782E1B21FA2AFB00CE7A7E /* Array<Connection>+price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array<Connection>+price.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,7 +353,7 @@
 		AC782D9121F9B2E600CE7A7E /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				AC782D9B21F9B7EF00CE7A7E /* ConnectionRepository.swift */,
+				AC782D9B21F9B7EF00CE7A7E /* NetworkRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -404,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				AC782E1721FA051900CE7A7E /* AdjacencyList+Location.swift */,
+				AC782E1B21FA2AFB00CE7A7E /* Array<Connection>+price.swift */,
 				AC782E1921FA247000CE7A7E /* Edge+Connection.swift */,
 			);
 			path = Extensions;
@@ -676,7 +679,7 @@
 			files = (
 				AC782E1A21FA247000CE7A7E /* Edge+Connection.swift in Sources */,
 				AC782D7E21F9AA2700CE7A7E /* Location.swift in Sources */,
-				AC782D9C21F9B7EF00CE7A7E /* ConnectionRepository.swift in Sources */,
+				AC782D9C21F9B7EF00CE7A7E /* NetworkRepository.swift in Sources */,
 				AC782E1121F9F72900CE7A7E /* Network.swift in Sources */,
 				AC782D8921F9B0CF00CE7A7E /* ConnectionListResponse.swift in Sources */,
 				AC782D9621F9B36B00CE7A7E /* Endpoint.swift in Sources */,
@@ -684,6 +687,7 @@
 				AC782E1821FA051900CE7A7E /* AdjacencyList+Location.swift in Sources */,
 				AC782D9821F9B36B00CE7A7E /* WebServiceAssembly.swift in Sources */,
 				AC782D8721F9AC9100CE7A7E /* Connection.swift in Sources */,
+				AC782E1C21FA2AFB00CE7A7E /* Array<Connection>+price.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

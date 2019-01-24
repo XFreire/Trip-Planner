@@ -60,23 +60,13 @@ extension Network {
 
 extension Network {
     func price(from cityFrom: Location, to cityTo: Location) -> Double? {
-        guard let from = graph.vertex(with: cityFrom),
-            let to = graph.vertex(with: cityTo) else { return nil }
+        let connections = cheapestConnection(from: cityFrom, to: cityTo)
         
-        let pathsFromCityFrom = dijkstra.shortestPath(from: from)
-        let path = dijkstra.shortestPath(to: to, paths: pathsFromCityFrom)
-        
-        let price = path.reduce(0) { (result, edge) -> Double in
-            guard let weight = edge.weight else { return result }
-            
-            return result + weight
-        }
-        
-        guard price != 0 else {
+        guard !connections.isEmpty else {
             return nil
         }
         
-        return price
+        return connections.price
     }
     
     func price(from cityFrom: String, to cityTo: String) -> Double? {
@@ -113,4 +103,5 @@ extension Network {
         return path.map { $0.connection }
     }
 }
+
 
