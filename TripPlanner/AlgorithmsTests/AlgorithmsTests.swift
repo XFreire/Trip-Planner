@@ -42,8 +42,6 @@ class AlgorithmsTests: XCTestCase {
         graph.add(.directed, from: sydney, to: capeTown, weight: 300)
         graph.add(.directed, from: newYork, to: losAngeles, weight: 180)
         graph.add(.directed, from: losAngeles, to: tokio, weight: 150)
-        
-        
     }
 
     override func tearDown() {
@@ -63,8 +61,7 @@ class AlgorithmsTests: XCTestCase {
         XCTAssertEqual(path.count, 2)
     }
     
-    #warning("Move this test to Vertex tests")
-    func testVertexEquality() {
+    func testVertex_Equality() {
         let vertex = Vertex(data: "London")
         
         XCTAssertEqual(london, vertex)

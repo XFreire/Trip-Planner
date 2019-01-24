@@ -284,8 +284,8 @@
 		AC782D6921F9A96700CE7A7E /* CoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				AC782D9D21F9CC4D00CE7A7E /* Mocks */,
 				AC782D6C21F9A96700CE7A7E /* Info.plist */,
+				AC782D9D21F9CC4D00CE7A7E /* Mocks */,
 				AC782D7F21F9AAC700CE7A7E /* JSONData */,
 				AC782D7B21F9A9D500CE7A7E /* LocationTests.swift */,
 				AC782D8421F9ABD400CE7A7E /* ConnectionTests.swift */,
