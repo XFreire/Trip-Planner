@@ -50,11 +50,28 @@ class AlgorithmsTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
+    func testAdjacencyList_Count() {
+        XCTAssertEqual(graph.vertices.count, 7)
+    }
+    
+    
     func testDijkstra_findShortestPathBetweenTwoVertex_ReturnsTheCorrectPath() {
         let dijkstra = Dijkstra(graph: graph)
         let pathsFromLondon = dijkstra.shortestPath(from: london)
         
         let path = dijkstra.shortestPath(to: sydney, paths: pathsFromLondon)
         XCTAssertEqual(path.count, 2)
+    }
+    
+    #warning("Move this test to Vertex tests")
+    func testVertexEquality() {
+        let vertex = Vertex(data: "London")
+        
+        XCTAssertEqual(london, vertex)
+    }
+    
+    func testDijkstra_VertexWithData_ReturnsTheCorrectVertex() {
+        let vertex = Vertex(data: "London")
+        XCTAssertEqual(graph.vertex(with: "London"), vertex)
     }
 }
