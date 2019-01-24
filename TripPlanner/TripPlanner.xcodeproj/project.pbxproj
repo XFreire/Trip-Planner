@@ -32,6 +32,20 @@
 		AC782D9C21F9B7EF00CE7A7E /* ConnectionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782D9B21F9B7EF00CE7A7E /* ConnectionRepository.swift */; };
 		AC782D9F21F9CC6000CE7A7E /* MockConnectionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782D9E21F9CC6000CE7A7E /* MockConnectionRepository.swift */; };
 		AC782DA121F9CD3200CE7A7E /* ConnectionRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782DA021F9CD3200CE7A7E /* ConnectionRepositoryTests.swift */; };
+		AC782DEC21F9F3C900CE7A7E /* Algorithms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC782DE321F9F3C800CE7A7E /* Algorithms.framework */; };
+		AC782DF321F9F3C900CE7A7E /* AlgorithmsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782DF221F9F3C900CE7A7E /* AlgorithmsTests.swift */; };
+		AC782DF521F9F3C900CE7A7E /* Algorithms.h in Headers */ = {isa = PBXBuildFile; fileRef = AC782DE521F9F3C800CE7A7E /* Algorithms.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC782DF821F9F3C900CE7A7E /* Algorithms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC782DE321F9F3C800CE7A7E /* Algorithms.framework */; };
+		AC782DF921F9F3C900CE7A7E /* Algorithms.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC782DE321F9F3C800CE7A7E /* Algorithms.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AC782E0521F9F3DE00CE7A7E /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E0021F9F3DD00CE7A7E /* Edge.swift */; };
+		AC782E0621F9F3DE00CE7A7E /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E0121F9F3DD00CE7A7E /* Graph.swift */; };
+		AC782E0721F9F3DE00CE7A7E /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E0221F9F3DD00CE7A7E /* Vertex.swift */; };
+		AC782E0821F9F3DE00CE7A7E /* AdjacencyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E0321F9F3DD00CE7A7E /* AdjacencyList.swift */; };
+		AC782E0921F9F3DE00CE7A7E /* Dijkstra.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E0421F9F3DE00CE7A7E /* Dijkstra.swift */; };
+		AC782E0D21F9F3E700CE7A7E /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E0A21F9F3E700CE7A7E /* Queue.swift */; };
+		AC782E0E21F9F3E700CE7A7E /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E0B21F9F3E700CE7A7E /* Heap.swift */; };
+		AC782E0F21F9F3E700CE7A7E /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E0C21F9F3E700CE7A7E /* PriorityQueue.swift */; };
+		AC782E1121F9F72900CE7A7E /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E1021F9F72900CE7A7E /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +77,27 @@
 			remoteGlobalIDString = AC782D5A21F9A96700CE7A7E;
 			remoteInfo = Core;
 		};
+		AC782DED21F9F3C900CE7A7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC782D2B21F9A92D00CE7A7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC782DE221F9F3C800CE7A7E;
+			remoteInfo = Algorithms;
+		};
+		AC782DEF21F9F3C900CE7A7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC782D2B21F9A92D00CE7A7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC782D3221F9A92D00CE7A7E;
+			remoteInfo = TripPlanner;
+		};
+		AC782DF621F9F3C900CE7A7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC782D2B21F9A92D00CE7A7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC782DE221F9F3C800CE7A7E;
+			remoteInfo = Algorithms;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -72,6 +107,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				AC782DF921F9F3C900CE7A7E /* Algorithms.framework in Embed Frameworks */,
 				AC782D7121F9A96700CE7A7E /* Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -110,6 +146,21 @@
 		AC782D9B21F9B7EF00CE7A7E /* ConnectionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionRepository.swift; sourceTree = "<group>"; };
 		AC782D9E21F9CC6000CE7A7E /* MockConnectionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConnectionRepository.swift; sourceTree = "<group>"; };
 		AC782DA021F9CD3200CE7A7E /* ConnectionRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionRepositoryTests.swift; sourceTree = "<group>"; };
+		AC782DE321F9F3C800CE7A7E /* Algorithms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Algorithms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC782DE521F9F3C800CE7A7E /* Algorithms.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Algorithms.h; sourceTree = "<group>"; };
+		AC782DE621F9F3C800CE7A7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC782DEB21F9F3C900CE7A7E /* AlgorithmsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgorithmsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC782DF221F9F3C900CE7A7E /* AlgorithmsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmsTests.swift; sourceTree = "<group>"; };
+		AC782DF421F9F3C900CE7A7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC782E0021F9F3DD00CE7A7E /* Edge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
+		AC782E0121F9F3DD00CE7A7E /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		AC782E0221F9F3DD00CE7A7E /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		AC782E0321F9F3DD00CE7A7E /* AdjacencyList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdjacencyList.swift; sourceTree = "<group>"; };
+		AC782E0421F9F3DE00CE7A7E /* Dijkstra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dijkstra.swift; sourceTree = "<group>"; };
+		AC782E0A21F9F3E700CE7A7E /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		AC782E0B21F9F3E700CE7A7E /* Heap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
+		AC782E0C21F9F3E700CE7A7E /* PriorityQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
+		AC782E1021F9F72900CE7A7E /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC782DF821F9F3C900CE7A7E /* Algorithms.framework in Frameworks */,
 				AC782D7021F9A96700CE7A7E /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +195,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AC782DE021F9F3C800CE7A7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC782DE821F9F3C900CE7A7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC782DEC21F9F3C900CE7A7E /* Algorithms.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -153,6 +220,8 @@
 				AC782D4A21F9A93200CE7A7E /* TripPlannerTests */,
 				AC782D5C21F9A96700CE7A7E /* Core */,
 				AC782D6921F9A96700CE7A7E /* CoreTests */,
+				AC782DE421F9F3C800CE7A7E /* Algorithms */,
+				AC782DF121F9F3C900CE7A7E /* AlgorithmsTests */,
 				AC782D3421F9A92D00CE7A7E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -164,6 +233,8 @@
 				AC782D4721F9A93200CE7A7E /* TripPlannerTests.xctest */,
 				AC782D5B21F9A96700CE7A7E /* Core.framework */,
 				AC782D6321F9A96700CE7A7E /* CoreTests.xctest */,
+				AC782DE321F9F3C800CE7A7E /* Algorithms.framework */,
+				AC782DEB21F9F3C900CE7A7E /* AlgorithmsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -230,6 +301,7 @@
 				AC782D7D21F9AA2700CE7A7E /* Location.swift */,
 				AC782D8621F9AC9100CE7A7E /* Connection.swift */,
 				AC782D8821F9B0CF00CE7A7E /* ConnectionListResponse.swift */,
+				AC782E1021F9F72900CE7A7E /* Network.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -294,6 +366,32 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		AC782DE421F9F3C800CE7A7E /* Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				AC782E0321F9F3DD00CE7A7E /* AdjacencyList.swift */,
+				AC782E0421F9F3DE00CE7A7E /* Dijkstra.swift */,
+				AC782E0021F9F3DD00CE7A7E /* Edge.swift */,
+				AC782E0121F9F3DD00CE7A7E /* Graph.swift */,
+				AC782E0221F9F3DD00CE7A7E /* Vertex.swift */,
+				AC782E0B21F9F3E700CE7A7E /* Heap.swift */,
+				AC782E0C21F9F3E700CE7A7E /* PriorityQueue.swift */,
+				AC782E0A21F9F3E700CE7A7E /* Queue.swift */,
+				AC782DE521F9F3C800CE7A7E /* Algorithms.h */,
+				AC782DE621F9F3C800CE7A7E /* Info.plist */,
+			);
+			path = Algorithms;
+			sourceTree = "<group>";
+		};
+		AC782DF121F9F3C900CE7A7E /* AlgorithmsTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC782DF221F9F3C900CE7A7E /* AlgorithmsTests.swift */,
+				AC782DF421F9F3C900CE7A7E /* Info.plist */,
+			);
+			path = AlgorithmsTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -302,6 +400,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC782D6D21F9A96700CE7A7E /* Core.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC782DDE21F9F3C800CE7A7E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC782DF521F9F3C900CE7A7E /* Algorithms.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +427,7 @@
 			);
 			dependencies = (
 				AC782D6F21F9A96700CE7A7E /* PBXTargetDependency */,
+				AC782DF721F9F3C900CE7A7E /* PBXTargetDependency */,
 			);
 			name = TripPlanner;
 			productName = TripPlanner;
@@ -382,6 +489,43 @@
 			productReference = AC782D6321F9A96700CE7A7E /* CoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		AC782DE221F9F3C800CE7A7E /* Algorithms */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC782DFE21F9F3C900CE7A7E /* Build configuration list for PBXNativeTarget "Algorithms" */;
+			buildPhases = (
+				AC782DDE21F9F3C800CE7A7E /* Headers */,
+				AC782DDF21F9F3C800CE7A7E /* Sources */,
+				AC782DE021F9F3C800CE7A7E /* Frameworks */,
+				AC782DE121F9F3C800CE7A7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Algorithms;
+			productName = Algorithms;
+			productReference = AC782DE321F9F3C800CE7A7E /* Algorithms.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AC782DEA21F9F3C900CE7A7E /* AlgorithmsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC782DFF21F9F3C900CE7A7E /* Build configuration list for PBXNativeTarget "AlgorithmsTests" */;
+			buildPhases = (
+				AC782DE721F9F3C900CE7A7E /* Sources */,
+				AC782DE821F9F3C900CE7A7E /* Frameworks */,
+				AC782DE921F9F3C900CE7A7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC782DEE21F9F3C900CE7A7E /* PBXTargetDependency */,
+				AC782DF021F9F3C900CE7A7E /* PBXTargetDependency */,
+			);
+			name = AlgorithmsTests;
+			productName = AlgorithmsTests;
+			productReference = AC782DEB21F9F3C900CE7A7E /* AlgorithmsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -408,6 +552,14 @@
 						LastSwiftMigration = 1010;
 						TestTargetID = AC782D3221F9A92D00CE7A7E;
 					};
+					AC782DE221F9F3C800CE7A7E = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+					AC782DEA21F9F3C900CE7A7E = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = AC782D3221F9A92D00CE7A7E;
+					};
 				};
 			};
 			buildConfigurationList = AC782D2E21F9A92D00CE7A7E /* Build configuration list for PBXProject "TripPlanner" */;
@@ -427,6 +579,8 @@
 				AC782D4621F9A93200CE7A7E /* TripPlannerTests */,
 				AC782D5A21F9A96700CE7A7E /* Core */,
 				AC782D6221F9A96700CE7A7E /* CoreTests */,
+				AC782DE221F9F3C800CE7A7E /* Algorithms */,
+				AC782DEA21F9F3C900CE7A7E /* AlgorithmsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -465,6 +619,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AC782DE121F9F3C800CE7A7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC782DE921F9F3C900CE7A7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -491,6 +659,7 @@
 			files = (
 				AC782D7E21F9AA2700CE7A7E /* Location.swift in Sources */,
 				AC782D9C21F9B7EF00CE7A7E /* ConnectionRepository.swift in Sources */,
+				AC782E1121F9F72900CE7A7E /* Network.swift in Sources */,
 				AC782D8921F9B0CF00CE7A7E /* ConnectionListResponse.swift in Sources */,
 				AC782D9621F9B36B00CE7A7E /* Endpoint.swift in Sources */,
 				AC782D9721F9B36B00CE7A7E /* WebService.swift in Sources */,
@@ -509,6 +678,29 @@
 				AC782DA121F9CD3200CE7A7E /* ConnectionRepositoryTests.swift in Sources */,
 				AC782D9A21F9B46C00CE7A7E /* EndpointTests.swift in Sources */,
 				AC782D8B21F9B11D00CE7A7E /* ConnectionListResponseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC782DDF21F9F3C800CE7A7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC782E0821F9F3DE00CE7A7E /* AdjacencyList.swift in Sources */,
+				AC782E0D21F9F3E700CE7A7E /* Queue.swift in Sources */,
+				AC782E0621F9F3DE00CE7A7E /* Graph.swift in Sources */,
+				AC782E0521F9F3DE00CE7A7E /* Edge.swift in Sources */,
+				AC782E0721F9F3DE00CE7A7E /* Vertex.swift in Sources */,
+				AC782E0F21F9F3E700CE7A7E /* PriorityQueue.swift in Sources */,
+				AC782E0921F9F3DE00CE7A7E /* Dijkstra.swift in Sources */,
+				AC782E0E21F9F3E700CE7A7E /* Heap.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC782DE721F9F3C900CE7A7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC782DF321F9F3C900CE7A7E /* AlgorithmsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +726,21 @@
 			isa = PBXTargetDependency;
 			target = AC782D5A21F9A96700CE7A7E /* Core */;
 			targetProxy = AC782D6E21F9A96700CE7A7E /* PBXContainerItemProxy */;
+		};
+		AC782DEE21F9F3C900CE7A7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC782DE221F9F3C800CE7A7E /* Algorithms */;
+			targetProxy = AC782DED21F9F3C900CE7A7E /* PBXContainerItemProxy */;
+		};
+		AC782DF021F9F3C900CE7A7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC782D3221F9A92D00CE7A7E /* TripPlanner */;
+			targetProxy = AC782DEF21F9F3C900CE7A7E /* PBXContainerItemProxy */;
+		};
+		AC782DF721F9F3C900CE7A7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC782DE221F9F3C800CE7A7E /* Algorithms */;
+			targetProxy = AC782DF621F9F3C900CE7A7E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -855,6 +1062,105 @@
 			};
 			name = Release;
 		};
+		AC782DFA21F9F3C900CE7A7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8LNA9LB2Y8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Algorithms/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexandrefreire.Algorithms;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AC782DFB21F9F3C900CE7A7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8LNA9LB2Y8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Algorithms/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexandrefreire.Algorithms;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AC782DFC21F9F3C900CE7A7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8LNA9LB2Y8;
+				INFOPLIST_FILE = AlgorithmsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexandrefreire.AlgorithmsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TripPlanner.app/TripPlanner";
+			};
+			name = Debug;
+		};
+		AC782DFD21F9F3C900CE7A7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8LNA9LB2Y8;
+				INFOPLIST_FILE = AlgorithmsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexandrefreire.AlgorithmsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TripPlanner.app/TripPlanner";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -899,6 +1205,24 @@
 			buildConfigurations = (
 				AC782D7721F9A96700CE7A7E /* Debug */,
 				AC782D7821F9A96700CE7A7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC782DFE21F9F3C900CE7A7E /* Build configuration list for PBXNativeTarget "Algorithms" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC782DFA21F9F3C900CE7A7E /* Debug */,
+				AC782DFB21F9F3C900CE7A7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC782DFF21F9F3C900CE7A7E /* Build configuration list for PBXNativeTarget "AlgorithmsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC782DFC21F9F3C900CE7A7E /* Debug */,
+				AC782DFD21F9F3C900CE7A7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
