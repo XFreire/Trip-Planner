@@ -179,6 +179,7 @@
 		AC782D5C21F9A96700CE7A7E /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				AC782D8E21F9B29B00CE7A7E /* HomeScreen */,
 				AC782D7921F9A98900CE7A7E /* Common */,
 				AC782D5D21F9A96700CE7A7E /* Core.h */,
 				AC782D5E21F9A96700CE7A7E /* Info.plist */,
@@ -223,6 +224,37 @@
 				AC782D8221F9AB3B00CE7A7E /* connection.json */,
 			);
 			path = JSONData;
+			sourceTree = "<group>";
+		};
+		AC782D8E21F9B29B00CE7A7E /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				AC782D8F21F9B2D500CE7A7E /* DI */,
+				AC782D9121F9B2E600CE7A7E /* Repositories */,
+				AC782D9021F9B2DC00CE7A7E /* Presentation */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		AC782D8F21F9B2D500CE7A7E /* DI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		AC782D9021F9B2DC00CE7A7E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		AC782D9121F9B2E600CE7A7E /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
