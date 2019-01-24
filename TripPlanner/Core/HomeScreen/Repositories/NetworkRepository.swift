@@ -12,7 +12,7 @@ protocol NetworkRepositoryProtocol {
     func network(then completion: @escaping (Network) -> Void, catchError: @escaping (Error) -> Void)
 }
 
-final class ConnectionRepository: NetworkRepositoryProtocol {
+final class NetworkRepository: NetworkRepositoryProtocol {
 
     // MARK: Properties
     private let webService: WebService

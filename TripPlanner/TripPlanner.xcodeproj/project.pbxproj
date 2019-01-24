@@ -53,6 +53,7 @@
 		AC782E1F21FA32AC00CE7A7E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E1D21FA32AC00CE7A7E /* SearchViewController.swift */; };
 		AC782E2021FA32AC00CE7A7E /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC782E1E21FA32AC00CE7A7E /* SearchViewController.xib */; };
 		AC782E2221FA354700CE7A7E /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E2121FA354700CE7A7E /* SearchPresenter.swift */; };
+		AC782E2421FA3AC100CE7A7E /* SearchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E2321FA3AC100CE7A7E /* SearchAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +176,7 @@
 		AC782E1D21FA32AC00CE7A7E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		AC782E1E21FA32AC00CE7A7E /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		AC782E2121FA354700CE7A7E /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		AC782E2321FA3AC100CE7A7E /* SearchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,6 +347,7 @@
 		AC782D8F21F9B2D500CE7A7E /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				AC782E2321FA3AC100CE7A7E /* SearchAssembly.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -698,6 +701,7 @@
 				AC782E1821FA051900CE7A7E /* AdjacencyList+Location.swift in Sources */,
 				AC782E2221FA354700CE7A7E /* SearchPresenter.swift in Sources */,
 				AC782D9821F9B36B00CE7A7E /* WebServiceAssembly.swift in Sources */,
+				AC782E2421FA3AC100CE7A7E /* SearchAssembly.swift in Sources */,
 				AC782D8721F9AC9100CE7A7E /* Connection.swift in Sources */,
 				AC782E1C21FA2AFB00CE7A7E /* Array<Connection>+price.swift in Sources */,
 			);
