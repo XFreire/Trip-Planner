@@ -19,7 +19,8 @@
 		AC782D7121F9A96700CE7A7E /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC782D5B21F9A96700CE7A7E /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AC782D7C21F9A9D500CE7A7E /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782D7B21F9A9D500CE7A7E /* LocationTests.swift */; };
 		AC782D7E21F9AA2700CE7A7E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782D7D21F9AA2700CE7A7E /* Location.swift */; };
-		AC782D8121F9AAEB00CE7A7E /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = AC782D8021F9AAEA00CE7A7E /* data.json */; };
+		AC782D8121F9AAEB00CE7A7E /* connection_list.json in Resources */ = {isa = PBXBuildFile; fileRef = AC782D8021F9AAEA00CE7A7E /* connection_list.json */; };
+		AC782D8321F9AB3B00CE7A7E /* connection.json in Resources */ = {isa = PBXBuildFile; fileRef = AC782D8221F9AB3B00CE7A7E /* connection.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +86,8 @@
 		AC782D6C21F9A96700CE7A7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC782D7B21F9A9D500CE7A7E /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		AC782D7D21F9AA2700CE7A7E /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		AC782D8021F9AAEA00CE7A7E /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		AC782D8021F9AAEA00CE7A7E /* connection_list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = connection_list.json; sourceTree = "<group>"; };
+		AC782D8221F9AB3B00CE7A7E /* connection.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = connection.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,7 +207,8 @@
 		AC782D7F21F9AAC700CE7A7E /* JSONData */ = {
 			isa = PBXGroup;
 			children = (
-				AC782D8021F9AAEA00CE7A7E /* data.json */,
+				AC782D8021F9AAEA00CE7A7E /* connection_list.json */,
+				AC782D8221F9AB3B00CE7A7E /* connection.json */,
 			);
 			path = JSONData;
 			sourceTree = "<group>";
@@ -376,7 +379,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC782D8121F9AAEB00CE7A7E /* data.json in Resources */,
+				AC782D8321F9AB3B00CE7A7E /* connection.json in Resources */,
+				AC782D8121F9AAEB00CE7A7E /* connection_list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
