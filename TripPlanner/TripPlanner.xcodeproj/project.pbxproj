@@ -29,6 +29,9 @@
 		AC782D9721F9B36B00CE7A7E /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782D9421F9B36B00CE7A7E /* WebService.swift */; };
 		AC782D9821F9B36B00CE7A7E /* WebServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782D9521F9B36B00CE7A7E /* WebServiceAssembly.swift */; };
 		AC782D9A21F9B46C00CE7A7E /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782D9921F9B46C00CE7A7E /* EndpointTests.swift */; };
+		AC782D9C21F9B7EF00CE7A7E /* ConnectionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782D9B21F9B7EF00CE7A7E /* ConnectionRepository.swift */; };
+		AC782D9F21F9CC6000CE7A7E /* MockConnectionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782D9E21F9CC6000CE7A7E /* MockConnectionRepository.swift */; };
+		AC782DA121F9CD3200CE7A7E /* ConnectionRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782DA021F9CD3200CE7A7E /* ConnectionRepositoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +107,9 @@
 		AC782D9421F9B36B00CE7A7E /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		AC782D9521F9B36B00CE7A7E /* WebServiceAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceAssembly.swift; sourceTree = "<group>"; };
 		AC782D9921F9B46C00CE7A7E /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
+		AC782D9B21F9B7EF00CE7A7E /* ConnectionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionRepository.swift; sourceTree = "<group>"; };
+		AC782D9E21F9CC6000CE7A7E /* MockConnectionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConnectionRepository.swift; sourceTree = "<group>"; };
+		AC782DA021F9CD3200CE7A7E /* ConnectionRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionRepositoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,9 +193,9 @@
 		AC782D5C21F9A96700CE7A7E /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				AC782D9221F9B34500CE7A7E /* WebService */,
 				AC782D8E21F9B29B00CE7A7E /* HomeScreen */,
 				AC782D7921F9A98900CE7A7E /* Common */,
+				AC782D9221F9B34500CE7A7E /* WebService */,
 				AC782D5D21F9A96700CE7A7E /* Core.h */,
 				AC782D5E21F9A96700CE7A7E /* Info.plist */,
 			);
@@ -199,11 +205,13 @@
 		AC782D6921F9A96700CE7A7E /* CoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				AC782D9D21F9CC4D00CE7A7E /* Mocks */,
 				AC782D6C21F9A96700CE7A7E /* Info.plist */,
 				AC782D7F21F9AAC700CE7A7E /* JSONData */,
 				AC782D7B21F9A9D500CE7A7E /* LocationTests.swift */,
 				AC782D8421F9ABD400CE7A7E /* ConnectionTests.swift */,
 				AC782D8A21F9B11D00CE7A7E /* ConnectionListResponseTests.swift */,
+				AC782DA021F9CD3200CE7A7E /* ConnectionRepositoryTests.swift */,
 			);
 			path = CoreTests;
 			sourceTree = "<group>";
@@ -263,6 +271,7 @@
 		AC782D9121F9B2E600CE7A7E /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				AC782D9B21F9B7EF00CE7A7E /* ConnectionRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -275,6 +284,14 @@
 				AC782D9521F9B36B00CE7A7E /* WebServiceAssembly.swift */,
 			);
 			path = WebService;
+			sourceTree = "<group>";
+		};
+		AC782D9D21F9CC4D00CE7A7E /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				AC782D9E21F9CC6000CE7A7E /* MockConnectionRepository.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -473,6 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC782D7E21F9AA2700CE7A7E /* Location.swift in Sources */,
+				AC782D9C21F9B7EF00CE7A7E /* ConnectionRepository.swift in Sources */,
 				AC782D8921F9B0CF00CE7A7E /* ConnectionListResponse.swift in Sources */,
 				AC782D9621F9B36B00CE7A7E /* Endpoint.swift in Sources */,
 				AC782D9721F9B36B00CE7A7E /* WebService.swift in Sources */,
@@ -487,6 +505,8 @@
 			files = (
 				AC782D7C21F9A9D500CE7A7E /* LocationTests.swift in Sources */,
 				AC782D8521F9ABD400CE7A7E /* ConnectionTests.swift in Sources */,
+				AC782D9F21F9CC6000CE7A7E /* MockConnectionRepository.swift in Sources */,
+				AC782DA121F9CD3200CE7A7E /* ConnectionRepositoryTests.swift in Sources */,
 				AC782D9A21F9B46C00CE7A7E /* EndpointTests.swift in Sources */,
 				AC782D8B21F9B11D00CE7A7E /* ConnectionListResponseTests.swift in Sources */,
 			);
