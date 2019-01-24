@@ -43,8 +43,8 @@ extension Network {
         return graph.vertices.count
     }
     
-    var cities: [Location] {
-        return graph.vertices.map { $0.data }
+    var cities: [String] {
+        return graph.vertices.map { $0.data.name }
     }
     
     func location(named name: String) -> Location? {
@@ -55,27 +55,6 @@ extension Network {
 extension Network {
     private var dijkstra: Dijkstra<Location> {
         return Dijkstra(graph: graph)
-    }
-}
-
-extension Network {
-    func price(from cityFrom: Location, to cityTo: Location) -> Double? {
-        let connections = cheapestConnection(from: cityFrom, to: cityTo)
-        
-        guard !connections.isEmpty else {
-            return nil
-        }
-        
-        return connections.price
-    }
-    
-    func price(from cityFrom: String, to cityTo: String) -> Double? {
-        guard let from = location(named: cityFrom),
-            let to = location(named: cityTo) else {
-                return nil
-        }
-        
-        return price(from: from, to: to)
     }
 }
 
