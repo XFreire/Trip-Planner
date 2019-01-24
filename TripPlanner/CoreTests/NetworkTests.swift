@@ -83,5 +83,9 @@ class NetworkTests: XCTestCase {
         // Porto -> Tokyo
         connections = network.cheapestConnection(from: "Porto", to: "Tokyo")
         XCTAssertTrue(connections.isEmpty)
+        
+        // London -> London
+        connections = network.cheapestConnection(from: "LoNdon", to: "London")
+        XCTAssertTrue(connections.isEmpty)
     }
 }
