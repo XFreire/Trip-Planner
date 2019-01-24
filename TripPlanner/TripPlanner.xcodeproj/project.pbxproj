@@ -14,10 +14,11 @@
 		AC782D4121F9A93100CE7A7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC782D3F21F9A93100CE7A7E /* LaunchScreen.storyboard */; };
 		AC782D4C21F9A93200CE7A7E /* TripPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782D4B21F9A93200CE7A7E /* TripPlannerTests.swift */; };
 		AC782D6421F9A96700CE7A7E /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC782D5B21F9A96700CE7A7E /* Core.framework */; };
-		AC782D6B21F9A96700CE7A7E /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782D6A21F9A96700CE7A7E /* CoreTests.swift */; };
 		AC782D6D21F9A96700CE7A7E /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = AC782D5D21F9A96700CE7A7E /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC782D7021F9A96700CE7A7E /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC782D5B21F9A96700CE7A7E /* Core.framework */; };
 		AC782D7121F9A96700CE7A7E /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC782D5B21F9A96700CE7A7E /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AC782D7C21F9A9D500CE7A7E /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782D7B21F9A9D500CE7A7E /* LocationTests.swift */; };
+		AC782D7E21F9AA2700CE7A7E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782D7D21F9AA2700CE7A7E /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,8 +81,9 @@
 		AC782D5D21F9A96700CE7A7E /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		AC782D5E21F9A96700CE7A7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC782D6321F9A96700CE7A7E /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC782D6A21F9A96700CE7A7E /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
 		AC782D6C21F9A96700CE7A7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC782D7B21F9A9D500CE7A7E /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
+		AC782D7D21F9AA2700CE7A7E /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 		AC782D5C21F9A96700CE7A7E /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				AC782D7921F9A98900CE7A7E /* Common */,
 				AC782D5D21F9A96700CE7A7E /* Core.h */,
 				AC782D5E21F9A96700CE7A7E /* Info.plist */,
 			);
@@ -174,10 +177,26 @@
 		AC782D6921F9A96700CE7A7E /* CoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				AC782D6A21F9A96700CE7A7E /* CoreTests.swift */,
 				AC782D6C21F9A96700CE7A7E /* Info.plist */,
+				AC782D7B21F9A9D500CE7A7E /* LocationTests.swift */,
 			);
 			path = CoreTests;
+			sourceTree = "<group>";
+		};
+		AC782D7921F9A98900CE7A7E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AC782D7A21F9A99900CE7A7E /* Domain */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		AC782D7A21F9A99900CE7A7E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				AC782D7D21F9AA2700CE7A7E /* Location.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,9 +306,11 @@
 					};
 					AC782D5A21F9A96700CE7A7E = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					AC782D6221F9A96700CE7A7E = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = AC782D3221F9A92D00CE7A7E;
 					};
 				};
@@ -371,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC782D7E21F9AA2700CE7A7E /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,7 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC782D6B21F9A96700CE7A7E /* CoreTests.swift in Sources */,
+				AC782D7C21F9A9D500CE7A7E /* LocationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +568,7 @@
 		AC782D5121F9A93200CE7A7E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8LNA9LB2Y8;
@@ -564,6 +587,7 @@
 		AC782D5221F9A93200CE7A7E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8LNA9LB2Y8;
@@ -624,6 +648,7 @@
 		AC782D7321F9A96700CE7A7E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -642,6 +667,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexandrefreire.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -652,6 +678,7 @@
 		AC782D7421F9A96700CE7A7E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -681,6 +708,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8LNA9LB2Y8;
 				INFOPLIST_FILE = CoreTests/Info.plist;
@@ -691,6 +719,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexandrefreire.CoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TripPlanner.app/TripPlanner";
@@ -701,6 +730,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8LNA9LB2Y8;
 				INFOPLIST_FILE = CoreTests/Info.plist;
