@@ -13,7 +13,7 @@ struct Connection: Decodable {
     // MARK: Properties
     let from: Location
     let to: Location
-    let price: Int
+    let price: Double
     
     // MARK: - Decodable
     private enum ContainerCodingKeys: String, CodingKey {
@@ -49,6 +49,6 @@ struct Connection: Decodable {
         self.to = Location(name: toName, latitude: toLat, longitude: toLong)
         
         // Price
-        self.price = try container.decode(Int.self, forKey: .price)
+        self.price = try container.decode(Double.self, forKey: .price)
     }
 }

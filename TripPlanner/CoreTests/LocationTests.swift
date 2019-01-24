@@ -10,9 +10,11 @@ import XCTest
 @testable import Core
 
 class LocationTests: XCTestCase {
-
+    
+    var london: Location!
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        london = Location(name: "London", latitude: 51.5285582, longitude: -0.241681)
     }
 
     override func tearDown() {
@@ -20,7 +22,23 @@ class LocationTests: XCTestCase {
     }
     
     func testLocationExistence() {
-        let location = Location(name: "London", latitude: 51.5285582, longitude: -0.241681)
-        XCTAssertNotNil(location)
+        XCTAssertNotNil(london)
+    }
+    
+    func testLocationHashable() {
+        XCTAssertNotNil(london.hashValue)
+    }
+    
+    func testLocationEquality() {
+        // Identity
+        XCTAssertEqual(london, london)
+        
+        // Equality
+        let otherLondon = Location(name: "London", latitude: 51.5285582, longitude: -0.241681)
+        XCTAssertEqual(london, otherLondon)
+        
+        // Inequality
+        let casterlyRock = Location(name: "Casterly Rock", latitude: 51.5285582, longitude: -0.241681)
+        XCTAssertNotEqual(london, casterlyRock)
     }
 }

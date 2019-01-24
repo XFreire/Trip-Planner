@@ -46,6 +46,8 @@
 		AC782E0E21F9F3E700CE7A7E /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E0B21F9F3E700CE7A7E /* Heap.swift */; };
 		AC782E0F21F9F3E700CE7A7E /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E0C21F9F3E700CE7A7E /* PriorityQueue.swift */; };
 		AC782E1121F9F72900CE7A7E /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E1021F9F72900CE7A7E /* Network.swift */; };
+		AC782E1521F9FF2000CE7A7E /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E1421F9FF2000CE7A7E /* NetworkTests.swift */; };
+		AC782E1821FA051900CE7A7E /* AdjacencyList+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E1721FA051900CE7A7E /* AdjacencyList+Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +163,8 @@
 		AC782E0B21F9F3E700CE7A7E /* Heap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
 		AC782E0C21F9F3E700CE7A7E /* PriorityQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
 		AC782E1021F9F72900CE7A7E /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		AC782E1421F9FF2000CE7A7E /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		AC782E1721FA051900CE7A7E /* AdjacencyList+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdjacencyList+Location.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +287,7 @@
 				AC782D8421F9ABD400CE7A7E /* ConnectionTests.swift */,
 				AC782D8A21F9B11D00CE7A7E /* ConnectionListResponseTests.swift */,
 				AC782DA021F9CD3200CE7A7E /* ConnectionRepositoryTests.swift */,
+				AC782E1421F9FF2000CE7A7E /* NetworkTests.swift */,
 			);
 			path = CoreTests;
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 		AC782D7921F9A98900CE7A7E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				AC782E1621FA04FB00CE7A7E /* AdjacencyList+Location */,
 				AC782D7A21F9A99900CE7A7E /* Domain */,
 			);
 			path = Common;
@@ -390,6 +396,14 @@
 				AC782DF421F9F3C900CE7A7E /* Info.plist */,
 			);
 			path = AlgorithmsTests;
+			sourceTree = "<group>";
+		};
+		AC782E1621FA04FB00CE7A7E /* AdjacencyList+Location */ = {
+			isa = PBXGroup;
+			children = (
+				AC782E1721FA051900CE7A7E /* AdjacencyList+Location.swift */,
+			);
+			path = "AdjacencyList+Location";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -663,6 +677,7 @@
 				AC782D8921F9B0CF00CE7A7E /* ConnectionListResponse.swift in Sources */,
 				AC782D9621F9B36B00CE7A7E /* Endpoint.swift in Sources */,
 				AC782D9721F9B36B00CE7A7E /* WebService.swift in Sources */,
+				AC782E1821FA051900CE7A7E /* AdjacencyList+Location.swift in Sources */,
 				AC782D9821F9B36B00CE7A7E /* WebServiceAssembly.swift in Sources */,
 				AC782D8721F9AC9100CE7A7E /* Connection.swift in Sources */,
 			);
@@ -672,6 +687,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC782E1521F9FF2000CE7A7E /* NetworkTests.swift in Sources */,
 				AC782D7C21F9A9D500CE7A7E /* LocationTests.swift in Sources */,
 				AC782D8521F9ABD400CE7A7E /* ConnectionTests.swift in Sources */,
 				AC782D9F21F9CC6000CE7A7E /* MockConnectionRepository.swift in Sources */,

@@ -17,3 +17,19 @@ struct Location {
     let latitude: Double
     let longitude: Double
 }
+extension Location {
+    var proxy: String {
+        return "\(name)"
+    }
+}
+extension Location: Hashable {
+    var hashValue: Int {
+        return proxy.hashValue
+    }
+}
+
+extension Location: Equatable {
+    static func == (lhs: Location, rhs: Location) -> Bool {
+        return lhs.proxy == rhs.proxy
+    }
+}
