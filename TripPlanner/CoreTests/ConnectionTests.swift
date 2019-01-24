@@ -13,11 +13,10 @@ class ConnectionTests: XCTestCase {
     private class Dummy {}
     
     var connection: Connection!
-    var connectionList: [Connection]!
     
     override func setUp() {
-        var path = Bundle(for: Dummy.self).path(forResource: "connection", ofType: "json")!
-        var data = try! Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+        let path = Bundle(for: Dummy.self).path(forResource: "connection", ofType: "json")!
+        let data = try! Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
         let decoder = JSONDecoder()
         connection = try! decoder.decode(Connection.self, from: data)
     }
