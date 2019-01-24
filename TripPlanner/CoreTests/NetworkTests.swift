@@ -96,5 +96,26 @@ class NetworkTests: XCTestCase {
         XCTAssertEqual(price, 330)
     }
     
-    
+    func testNetwork_CheapestRouteBetweenTwoCitiesAsLocation_ReturnTheCorrectConnection() {
+        // London -> Sydney
+        var from = network.location(named: "London")!
+        var to = network.location(named: "Sydney")!
+        var connections = network.cheapestConnection(from: from, to: to)
+        
+        XCTAssertEqual(connections.count, 2)
+        XCTAssertEqual(connections[0].from.name, "London")
+        XCTAssertEqual(connections[0].to.name, "Tokyo")
+        XCTAssertEqual(connections[1].from.name, "Tokyo")
+        XCTAssertEqual(connections[1].to.name, "Sydney")
+        
+        let price: Double = connections.reduce(0) { $0 + $1.price }
+        XCTAssertEqual(price, 850)
+        
+        // Porto -> Tokyo
+        from = network.location(named: "Porto")!
+        to = network.location(named: "Tokyo")!
+        connections = network.cheapestConnection(from: from, to: to)
+        
+        XCTAssertTrue(connections.isEmpty)
+    }
 }

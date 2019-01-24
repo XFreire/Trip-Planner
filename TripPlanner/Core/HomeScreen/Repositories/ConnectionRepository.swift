@@ -8,12 +8,12 @@
 
 import Foundation
 
-protocol ConnectionRepositoryProtocol {
-    func all(then completion: @escaping ([Connection]) -> Void, catchError: @escaping (Error) -> Void)
+protocol NetworkRepositoryProtocol {
+    func network(then completion: @escaping (Network) -> Void, catchError: @escaping (Error) -> Void)
     func cheapestConnection(between fromCity: City, and toCity: City, then completion: @escaping (Connection?) -> Void, catchError: @escaping (Error) -> Void)
 }
 
-final class ConnectionRepository: ConnectionRepositoryProtocol {
+final class ConnectionRepository: NetworkRepositoryProtocol {
 
     // MARK: Properties
     private let webService: WebService
@@ -24,17 +24,17 @@ final class ConnectionRepository: ConnectionRepositoryProtocol {
     }
     
     // MARK: ConnectionRepositoryProtocol
-    func all(then completion: @escaping ([Connection]) -> Void, catchError: @escaping (Error) -> Void) {
+    func network(then completion: @escaping (Network) -> Void, catchError: @escaping (Error) -> Void) {
         
         webService.load(ConnectionListResponse.self, from: .connections, then: {
-            completion($0.connections)
+            completion(Network(connections: $0.connections))
         }, catchError: {
             catchError($0)
         })
     }
 }
 
-extension ConnectionRepositoryProtocol {
+extension NetworkRepositoryProtocol {
     func cheapestConnection(between fromCity: City, and toCity: City, then completion: @escaping (Connection?) -> Void, catchError: @escaping (Error) -> Void) {
         
         #warning("Implement this")

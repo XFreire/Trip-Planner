@@ -15,6 +15,11 @@ struct Connection: Decodable {
     let to: Location
     let price: Double
     
+    // MARK: Initialization
+    init(from: Location, to: Location, price: Double) {
+        (self.from, self.to, self.price) = (from, to, price)
+    }
+    
     // MARK: - Decodable
     private enum ContainerCodingKeys: String, CodingKey {
         case from, to, price, coordinates
@@ -52,3 +57,5 @@ struct Connection: Decodable {
         self.price = try container.decode(Double.self, forKey: .price)
     }
 }
+
+extension Connection: Hashable, Equatable {} 

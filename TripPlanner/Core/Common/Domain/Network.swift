@@ -88,3 +88,29 @@ extension Network {
         return price(from: from, to: to)
     }
 }
+
+extension Network {
+    
+    func cheapestConnection(from cityFrom: Location, to cityTo: Location) -> [Connection] {
+        guard let from = graph.vertex(with: cityFrom),
+            let to = graph.vertex(with: cityTo) else { return [] }
+        
+        let pathsFromCityFrom = dijkstra.shortestPath(from: from)
+        let path = dijkstra.shortestPath(to: to, paths: pathsFromCityFrom)
+    
+        return path.map { $0.connection }
+    }
+    
+    func cheapestConnection(from cityFrom: String, to cityTo: String) -> [Connection] {
+        guard let from = graph.vertex(named: cityFrom),
+            let to = graph.vertex(named: cityTo) else {
+                return []
+        }
+        
+        let pathsFromCityFrom = dijkstra.shortestPath(from: from)
+        let path = dijkstra.shortestPath(to: to, paths: pathsFromCityFrom)
+        
+        return path.map { $0.connection }
+    }
+}
+

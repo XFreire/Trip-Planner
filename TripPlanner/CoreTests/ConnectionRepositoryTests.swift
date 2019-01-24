@@ -11,10 +11,10 @@ import XCTest
 
 class ConnectionRepositoryTests: XCTestCase {
 
-    var repository: ConnectionRepositoryProtocol!
+    var repository: NetworkRepositoryProtocol!
     
     override func setUp() {
-        repository = MockConnectionRepository()
+        repository = MockNetworkRepository()
     }
 
     override func tearDown() {
@@ -23,10 +23,10 @@ class ConnectionRepositoryTests: XCTestCase {
 
     func testConnectionRepository_All_ReturnsTheCorrectList() {
         let expectation = self.expectation(description: "AllConnections")
-        var connectionList: [Connection]?
+        var network: Network?
         
-        repository.all(then: {
-            connectionList = $0
+        repository.network(then: {
+            network = $0
             expectation.fulfill()
         }, catchError: { _ in
             expectation.fulfill()
@@ -34,6 +34,6 @@ class ConnectionRepositoryTests: XCTestCase {
         
         waitForExpectations(timeout: 5, handler: nil)
         
-        XCTAssertEqual(connectionList?.count, 8)
+        XCTAssertEqual(network?.count, 7)
     }
 }

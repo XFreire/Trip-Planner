@@ -28,4 +28,16 @@ class ConnectionTests: XCTestCase {
     func testConnectionExistence() {
         XCTAssertNotNil(connection)
     }
+    
+    func testConnectionHashable() {
+        XCTAssertNotNil(connection.hashValue)
+    }
+    
+    func testConnectionEquality() {
+        XCTAssertEqual(connection, connection)
+        
+        let otherConnection = Connection(from: Location(name: "London", latitude: 0, longitude: 0), to: Location(name: "Los Angeles", latitude: 0, longitude: 0), price: 300)
+        
+        XCTAssertNotEqual(connection, otherConnection)
+    }
 }

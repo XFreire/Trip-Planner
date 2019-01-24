@@ -48,6 +48,7 @@
 		AC782E1121F9F72900CE7A7E /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E1021F9F72900CE7A7E /* Network.swift */; };
 		AC782E1521F9FF2000CE7A7E /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E1421F9FF2000CE7A7E /* NetworkTests.swift */; };
 		AC782E1821FA051900CE7A7E /* AdjacencyList+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E1721FA051900CE7A7E /* AdjacencyList+Location.swift */; };
+		AC782E1A21FA247000CE7A7E /* Edge+Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E1921FA247000CE7A7E /* Edge+Connection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +166,7 @@
 		AC782E1021F9F72900CE7A7E /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		AC782E1421F9FF2000CE7A7E /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		AC782E1721FA051900CE7A7E /* AdjacencyList+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdjacencyList+Location.swift"; sourceTree = "<group>"; };
+		AC782E1921FA247000CE7A7E /* Edge+Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Edge+Connection.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,7 +297,7 @@
 		AC782D7921F9A98900CE7A7E /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				AC782E1621FA04FB00CE7A7E /* AdjacencyList+Location */,
+				AC782E1621FA04FB00CE7A7E /* Extensions */,
 				AC782D7A21F9A99900CE7A7E /* Domain */,
 			);
 			path = Common;
@@ -398,12 +400,13 @@
 			path = AlgorithmsTests;
 			sourceTree = "<group>";
 		};
-		AC782E1621FA04FB00CE7A7E /* AdjacencyList+Location */ = {
+		AC782E1621FA04FB00CE7A7E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				AC782E1721FA051900CE7A7E /* AdjacencyList+Location.swift */,
+				AC782E1921FA247000CE7A7E /* Edge+Connection.swift */,
 			);
-			path = "AdjacencyList+Location";
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -671,6 +674,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC782E1A21FA247000CE7A7E /* Edge+Connection.swift in Sources */,
 				AC782D7E21F9AA2700CE7A7E /* Location.swift in Sources */,
 				AC782D9C21F9B7EF00CE7A7E /* ConnectionRepository.swift in Sources */,
 				AC782E1121F9F72900CE7A7E /* Network.swift in Sources */,
