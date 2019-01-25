@@ -7,7 +7,8 @@ Write an app that help you find the cheapest route between two cities.
 4. BONUS: use a textfield with autocomplete to fill the name of  departure and destination city  
 5. BONUS: Show the selected route on a map  
 
-- Don’t pay too much attention to design, use standard UI elements - Organise your code in reusable components
+- Don’t pay too much attention to design, use standard UI elements 
+- Organise your code in reusable components
 - Code in Swift 4+ 
 - Use iOS SDK version of your choice 
 - Don’t use any 3rd party tools/frameworks
