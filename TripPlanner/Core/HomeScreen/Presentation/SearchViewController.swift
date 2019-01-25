@@ -73,7 +73,7 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController: SearchView {
     func setLoading(_ loading: Bool) {
-        let views: [UIView?] = [originField, destinationField, priceTitleLabel, priceTitleLabel, mapView]
+        let views: [UIView?] = [originField, destinationField, priceTitleLabel, priceLabel, mapView]
         views.forEach{ $0?.isHidden = loading }
         if loading {
             loadingView.startAnimating()
