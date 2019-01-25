@@ -109,6 +109,9 @@ extension SearchViewController: SearchView {
         
         polyline = MKPolyline(coordinates: locations, count: locations.count)
         mapView.addOverlay(polyline!)
+        
+        let padding = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        mapView.setVisibleMapRect(polyline!.boundingMapRect, edgePadding: padding, animated: true)
     }
     
     func show(error: Error) {
@@ -123,9 +126,6 @@ extension SearchViewController: MKMapViewDelegate {
         if overlay is MKPolyline {
             renderer!.strokeColor = .red
             renderer!.lineWidth = 3
-            
-            let padding = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-            mapView.setVisibleMapRect(overlay.boundingMapRect, edgePadding: padding, animated: true)
         }
         
         return renderer!
