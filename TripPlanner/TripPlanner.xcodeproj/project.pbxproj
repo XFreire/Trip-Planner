@@ -317,7 +317,7 @@
 		AC782D7921F9A98900CE7A7E /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				AC9CD10021FB17DE00D6D77A /* VIews */,
+				AC9CD10021FB17DE00D6D77A /* Views */,
 				AC782E1621FA04FB00CE7A7E /* Extensions */,
 				AC782D7A21F9A99900CE7A7E /* Domain */,
 			);
@@ -446,13 +446,13 @@
 			path = DI;
 			sourceTree = "<group>";
 		};
-		AC9CD10021FB17DE00D6D77A /* VIews */ = {
+		AC9CD10021FB17DE00D6D77A /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				AC9CD10121FB183A00D6D77A /* ErrorViewController.swift */,
 				AC9CD10221FB183A00D6D77A /* ErrorViewController.xib */,
 			);
-			path = VIews;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
