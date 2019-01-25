@@ -13,11 +13,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="Core" customModuleProvider="target">
             <connections>
                 <outlet property="destinationField" destination="YrZ-My-KhI" id="yii-a1-mbY"/>
-                <outlet property="loadingView" destination="O0D-qP-MY0" id="7hc-i8-iCh"/>
+                <outlet property="loadingView" destination="O0D-qP-MY0" id="UBs-MA-88C"/>
                 <outlet property="mapView" destination="MgI-qE-LLf" id="C9j-T3-9Ya"/>
                 <outlet property="originField" destination="7UQ-wc-uqW" id="EoO-S4-qCu"/>
                 <outlet property="priceLabel" destination="pW1-BQ-zXH" id="wRW-15-Ros"/>
-                <outlet property="priceTitleLabel" destination="sVb-yG-ZKK" id="Tlw-jR-Mu7"/>
+                <outlet property="priceTitleLabel" destination="sVb-yG-ZKK" id="tmZ-Qt-trS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
