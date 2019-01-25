@@ -25,10 +25,14 @@ final class NetworkRepository: NetworkRepositoryProtocol {
     // MARK: ConnectionRepositoryProtocol
     func network(then completion: @escaping (Network) -> Void, catchError: @escaping (Error) -> Void) {
         
-        webService.load(ConnectionListResponse.self, from: .connections, then: {
-            completion(Network(connections: $0.connections))
-        }, catchError: {
-            catchError($0)
+        webService.load(ConnectionListResponse.self, from: .connections, then: { network in
+            DispatchQueue.main.async {
+                completion(Network(connections: network.connections))
+            }
+        }, catchError: { error in
+            DispatchQueue.main.async {
+                catchError(error)
+            }
         })
     }
 }
