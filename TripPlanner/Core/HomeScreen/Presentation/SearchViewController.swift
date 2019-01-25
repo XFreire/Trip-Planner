@@ -98,7 +98,9 @@ extension SearchViewController: SearchView {
     }
     
     func show(route: [Connection]) {
-        mapView.removeOverlays(mapView.overlays)
+        if let _ = polyline {
+            renderer?.strokeColor = .clear
+        }
         var locations = [CLLocationCoordinate2D]()
         route.forEach {
             locations.append($0.from.clLocationCoordinate2D)
