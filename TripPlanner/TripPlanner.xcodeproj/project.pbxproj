@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC0FE03821FAF713007485E5 /* Location+CoreLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0FE03721FAF713007485E5 /* Location+CoreLocation.swift */; };
 		AC782D3721F9A92D00CE7A7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782D3621F9A92D00CE7A7E /* AppDelegate.swift */; };
 		AC782D3E21F9A93100CE7A7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC782D3D21F9A93100CE7A7E /* Assets.xcassets */; };
 		AC782D4121F9A93100CE7A7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC782D3F21F9A93100CE7A7E /* LaunchScreen.storyboard */; };
@@ -125,6 +126,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AC0FE03721FAF713007485E5 /* Location+CoreLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreLocation.swift"; sourceTree = "<group>"; };
 		AC782D3321F9A92D00CE7A7E /* TripPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC782D3621F9A92D00CE7A7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC782D3D21F9A93100CE7A7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -423,6 +425,7 @@
 				AC782E1721FA051900CE7A7E /* AdjacencyList+Location.swift */,
 				AC782E1B21FA2AFB00CE7A7E /* Array<Connection>+price.swift */,
 				AC782E1921FA247000CE7A7E /* Edge+Connection.swift */,
+				AC0FE03721FAF713007485E5 /* Location+CoreLocation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -705,6 +708,7 @@
 				AC782D9C21F9B7EF00CE7A7E /* NetworkRepository.swift in Sources */,
 				AC782E2721FA3BC100CE7A7E /* CoreAssembly.swift in Sources */,
 				AC782E1121F9F72900CE7A7E /* Network.swift in Sources */,
+				AC0FE03821FAF713007485E5 /* Location+CoreLocation.swift in Sources */,
 				AC782D8921F9B0CF00CE7A7E /* ConnectionListResponse.swift in Sources */,
 				AC782D9621F9B36B00CE7A7E /* Endpoint.swift in Sources */,
 				AC782E1F21FA32AC00CE7A7E /* SearchViewController.swift in Sources */,

@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import Core
+import CoreLocation
 
 class LocationTests: XCTestCase {
     
@@ -40,5 +41,13 @@ class LocationTests: XCTestCase {
         // Inequality
         let casterlyRock = Location(name: "Casterly Rock", latitude: 51.5285582, longitude: -0.241681)
         XCTAssertNotEqual(london, casterlyRock)
+    }
+    
+    func testLocationCoordinate2D() {
+        let londonLocationCoordinate2D = london.clLocationCoordinate2D
+        let coordinate = CLLocationCoordinate2D(latitude: london.latitude, longitude: london.longitude)
+        
+        XCTAssertEqual(londonLocationCoordinate2D.latitude, coordinate.latitude)
+        XCTAssertEqual(londonLocationCoordinate2D.longitude, coordinate.longitude)
     }
 }
