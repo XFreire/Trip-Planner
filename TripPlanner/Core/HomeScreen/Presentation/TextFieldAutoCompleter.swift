@@ -12,8 +12,7 @@ final class TextFieldAutoCompleter: NSObject, UITextFieldDelegate {
     
     // MARK: Properties
     var suggestions = [City]()
-    var didChangeSource: (String) -> Void = { _ in }
-    var didChangeDestination: (String) -> Void = { _ in }
+    var didChangeText: (UITextField) -> Void = { _ in }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return !autoCompleteText(in : textField, using: string, suggestions: suggestions)
@@ -37,6 +36,7 @@ final class TextFieldAutoCompleter: NSObject, UITextFieldDelegate {
             }
             if (matches.count > 0) {
                 textField.text = matches[0]
+                didChangeText(textField)
                 if let start = textField.position(from: textField.beginningOfDocument, offset: prefix.count) {
                     textField.selectedTextRange = textField.textRange(from: start, to: textField.endOfDocument)
                     

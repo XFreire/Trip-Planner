@@ -38,9 +38,11 @@ class SearchViewController: UIViewController {
         presenter.view = self
         presenter.didLoad()
         subscribeToTextFieldChanges()
-        originField.delegate = self
-        destinationField.delegate = self
-        
+        originField.delegate = autoCompleter
+        destinationField.delegate = autoCompleter
+        autoCompleter.didChangeText = { [weak self] textField in
+            self?.setupBindings(with: textField)
+        }
     }
     
     func setupBindings(with textField: UITextField) {
@@ -87,39 +89,3 @@ extension SearchViewController: SearchView {
     }
 }
 
-extension SearchViewController: UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-   //     setupBindings(with: textField)
-        return !autoCompleteText(in : textField, using: string, suggestions: presenter.network?.cities ?? [])
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        setupBindings(with: textField)
-        //textField.resignFirstResponder()
-        return true
-    }
-    
-    func autoCompleteText(in textField: UITextField, using string: String, suggestions: [String]) -> Bool {
-        let theString = string.capitalized
-        if !theString.isEmpty,
-            let selectedTextRange = textField.selectedTextRange,
-            selectedTextRange.end == textField.endOfDocument,
-            let prefixRange = textField.textRange(from: textField.beginningOfDocument, to: selectedTextRange.start),
-            let text = textField.text( in : prefixRange) {
-            let prefix = text + theString
-            let matches = suggestions.filter {
-                $0.lowercased().hasPrefix(prefix.lowercased())
-            }
-            if (matches.count > 0) {
-                textField.text = matches[0]
-                setupBindings(with: textField)
-                if let start = textField.position(from: textField.beginningOfDocument, offset: prefix.count) {
-                    textField.selectedTextRange = textField.textRange(from: start, to: textField.endOfDocument)
-                    
-                    return true
-                }
-            }
-        }
-        return false
-    }
-}
