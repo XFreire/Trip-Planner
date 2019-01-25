@@ -56,6 +56,9 @@
 		AC782E2721FA3BC100CE7A7E /* CoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E2621FA3BC100CE7A7E /* CoreAssembly.swift */; };
 		AC782E2921FA3C5E00CE7A7E /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E2821FA3C5E00CE7A7E /* AppAssembly.swift */; };
 		AC782E2C21FA40CD00CE7A7E /* TextFieldAutoCompleter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC782E2B21FA40CD00CE7A7E /* TextFieldAutoCompleter.swift */; };
+		AC9CD10321FB183A00D6D77A /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CD10121FB183A00D6D77A /* ErrorViewController.swift */; };
+		AC9CD10421FB183A00D6D77A /* ErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC9CD10221FB183A00D6D77A /* ErrorViewController.xib */; };
+		AC9CD10621FB186900D6D77A /* UIViewController+ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CD10521FB186900D6D77A /* UIViewController+ChildViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +184,9 @@
 		AC782E2621FA3BC100CE7A7E /* CoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAssembly.swift; sourceTree = "<group>"; };
 		AC782E2821FA3C5E00CE7A7E /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
 		AC782E2B21FA40CD00CE7A7E /* TextFieldAutoCompleter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAutoCompleter.swift; sourceTree = "<group>"; };
+		AC9CD10121FB183A00D6D77A /* ErrorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
+		AC9CD10221FB183A00D6D77A /* ErrorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ErrorViewController.xib; sourceTree = "<group>"; };
+		AC9CD10521FB186900D6D77A /* UIViewController+ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ChildViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +317,7 @@
 		AC782D7921F9A98900CE7A7E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				AC9CD10021FB17DE00D6D77A /* VIews */,
 				AC782E1621FA04FB00CE7A7E /* Extensions */,
 				AC782D7A21F9A99900CE7A7E /* Domain */,
 			);
@@ -422,6 +429,7 @@
 		AC782E1621FA04FB00CE7A7E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				AC9CD10521FB186900D6D77A /* UIViewController+ChildViewController.swift */,
 				AC782E1721FA051900CE7A7E /* AdjacencyList+Location.swift */,
 				AC782E1B21FA2AFB00CE7A7E /* Array<Connection>+price.swift */,
 				AC782E1921FA247000CE7A7E /* Edge+Connection.swift */,
@@ -436,6 +444,15 @@
 				AC782E2621FA3BC100CE7A7E /* CoreAssembly.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		AC9CD10021FB17DE00D6D77A /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+				AC9CD10121FB183A00D6D77A /* ErrorViewController.swift */,
+				AC9CD10221FB183A00D6D77A /* ErrorViewController.xib */,
+			);
+			path = VIews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -653,6 +670,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC782E2021FA32AC00CE7A7E /* SearchViewController.xib in Resources */,
+				AC9CD10421FB183A00D6D77A /* ErrorViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -710,11 +728,13 @@
 				AC782E1121F9F72900CE7A7E /* Network.swift in Sources */,
 				AC0FE03821FAF713007485E5 /* Location+CoreLocation.swift in Sources */,
 				AC782D8921F9B0CF00CE7A7E /* ConnectionListResponse.swift in Sources */,
+				AC9CD10321FB183A00D6D77A /* ErrorViewController.swift in Sources */,
 				AC782D9621F9B36B00CE7A7E /* Endpoint.swift in Sources */,
 				AC782E1F21FA32AC00CE7A7E /* SearchViewController.swift in Sources */,
 				AC782D9721F9B36B00CE7A7E /* WebService.swift in Sources */,
 				AC782E2C21FA40CD00CE7A7E /* TextFieldAutoCompleter.swift in Sources */,
 				AC782E1821FA051900CE7A7E /* AdjacencyList+Location.swift in Sources */,
+				AC9CD10621FB186900D6D77A /* UIViewController+ChildViewController.swift in Sources */,
 				AC782E2221FA354700CE7A7E /* SearchPresenter.swift in Sources */,
 				AC782D9821F9B36B00CE7A7E /* WebServiceAssembly.swift in Sources */,
 				AC782E2421FA3AC100CE7A7E /* SearchAssembly.swift in Sources */,

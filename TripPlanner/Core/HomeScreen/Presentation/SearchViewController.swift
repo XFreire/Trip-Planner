@@ -115,7 +115,7 @@ extension SearchViewController: SearchView {
     }
     
     func show(error: Error) {
-        #warning("TODO")
+        add(ErrorViewController(error: error.localizedDescription))
     }
 }
 
